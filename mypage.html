@@ -1,0 +1,34 @@
+<html> 
+ <body>
+    <div id="title">
+    <h1>Welcome to Timi's webpage</h1>
+    <p>This is where dreams come true</p>
+    <button onclick="makeDreamComeTrue()">Make dreams come true</button>
+</div>
+</body>
+</html>
+<style>
+    body {
+        background-image: url("https://imgs.search.brave.com/F30Upx0V5H_MCGdl9KAUEcTnthQZpo6jQ7LpVPobiuE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9sYW5k/c2NhcGUtbmF0dXJl/LXZpZXctYmFja2dy/b3VuZC12aWV3LXdp/bmRvdy1sYW5kc2Nh/cGUtbmF0dXJlLXZp/ZXctYmFja2dyb3Vu/ZC12aWV3LXdpbmRv/dy13b25kZXJmdWwt/bGFuZHNjYXBlLTEy/MTQ1OTY3OS5qcGc");
+        background-size: cover;
+    }
+    h1 {
+        color:rgba(0, 213, 255, 0.558);
+    }
+    button:hover {
+        background-color: rgba(221, 255, 0, 0.805);
+        cursor: pointer;
+        font-size: 20px;
+    }
+    #title {
+        width: 100%;
+        text-align: center;
+        margin-top: 50px;
+    }
+</style>
+<script>
+    function makeDreamComeTrue () {
+        document.body.style.background = 'url("https://imgs.search.brave.com/J1N6rRlmi5XZnpojmc4Oy5Kq4Gqyb_OKPRAyoYt0V8U/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9naWZk/Yi5jb20vaW1hZ2Vz/L2hpZ2gvYXRvbWlj/LWJvbWItZXhwbG9z/aW9uLWZ5c2k1bm9h/eTk5ZXZ6ajMuZ2lm.gif")';
+        document.getElementById("title").style.visibility = "hidden";
+    }
+</script>
