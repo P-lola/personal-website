@@ -1,12 +1,14 @@
  h1 {
-        color:rgba(0, 213, 255, 0.558);
+        color:rgba(186, 15, 120, 0.808);
     }
     button:hover {
-        background-color: rgba(221, 255, 0, 0.805);
+        background-color: rgba(77, 142, 36, 0.805);
         cursor: pointer;
         font-size: 20px;
     }
     #title {
         text-align: center;
         padding-top: 200px;
+        background-image: url('../images/keith-hardy-PP8Escz15d8-unsplash.jpg');
+        background-position: center top;
     }
