@@ -7,6 +7,13 @@ h1 {
         color: var(--titleSectionPrimaryColor);
 }
 
+.title-section-header {
+    margin-bottom:-15px;
+}
+
+.title-section-paragraph{ 
+    margin-bottom: 25px;
+}
 .title-section-button{
     color: var(--titleSectionPrimaryColor);
     border: solid var(--titleSectionPrimaryColor); 1px;
