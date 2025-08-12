@@ -1,15 +1,24 @@
 <html>
     <head>
         <link rel="stylesheet" href="./titlesection/titlesection.css">
+        <link rel="stylesheet" href="./aboutmesection/aboutmesection.css">
         <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900" rel="stylesheet">
     </head>
  <body>
     <div class="main-section" id="title">
-    <h1 class="title-section-header"> Ilesanmi Pipelolaoluwa</h1>
-    <p class="title-section-paragraph">Envisioning A Future for Web Development</p>
-    <button class="title-section-button" onclick="makeDreamComeTrue()">ENVISION WITH ME</button>
+        <h1 class="title-section-header">Ilesanmi Pipelolaoluwa</h1>
+        <p class="title-section-paragraph">Envisioning A Future for Web Development</p>
+        <button class="title-section-button" onclick="makeDreamComeTrue()">ENVISION WITH ME</button>
     </div>
-    
+    <div class="misc-section" id="aboutme">
+        <div class="text-block-container">
+            <h1>About Me</h1>
+            <p class="aboutme-section-description"> I am a Chemical Engineering graduate turned full-time freelance 
+                software engineer. As a Nigerian, my hope and dreams is to be bigger than everyone thought I'll be,
+                and I am here to help you too. I am a self-taught software engineer with a passion for creating 
+                innovative solutions. </p>
+        </div>
+    </div>
  </body>
 </html>
 <style>
@@ -28,6 +37,23 @@
         background-size: cover;
         padding: 25px;
     }
+
+    .misc-section{
+        width: 100vw;
+        padding: 100px 25px;
+    }
+
+    .text-block-container{
+        width: 65%;
+        border: solid black 1px;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: 500px) {
+     .text-block-container {
+        width: 100%;
+    }
+}
 </style>
 
 <script>
