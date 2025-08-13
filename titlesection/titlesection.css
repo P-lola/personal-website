@@ -1,10 +1,13 @@
 :root {
     --titleSectionPrimaryColor: white;
     --titleSectionSecondaryColor: #93663F;
+    --titleSectionTertiaryColor: #775B43;
+    --titleSectionColor1: #BFC9C8;
+    --titleSectionColor2: #000000;
 }
 
- {
-        color: var(--titleSectionPrimaryColor);
+h1 {
+    text-shadow: 2px 2px 2px var(--titleSectionSecondaryColor);
 }
 
 .title-section-header {
@@ -17,7 +20,7 @@
 
 .title-section-button{
     color: var(--titleSectionPrimaryColor);
-    border: solid var(--titleSectionPrimaryColor); 1px;
+    border: solid var(--titleSectionPrimaryColor) 1px;
     border-radius: 10px;
     padding: 15px 20px;
     background-color: transparent;
@@ -32,8 +35,9 @@
     }
 
 .title-section-button:hover {
-        background-color: #C2CCCB;
+        background-color: var(--titleSectionColor1);
         color: var(--titleSectionSecondaryColor);
         cursor: pointer;
+        transform: scale(1.3);
     }
-    
+

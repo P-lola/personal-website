@@ -2,22 +2,40 @@
     <head>
         <link rel="stylesheet" href="./titlesection/titlesection.css">
         <link rel="stylesheet" href="./aboutmesection/aboutmesection.css">
-        <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
     </head>
  <body>
     <div class="main-section" id="title">
         <h1 class="title-section-header">Ilesanmi Pipelolaoluwa</h1>
-        <p class="title-section-paragraph">Envisioning A Future for Web Development</p>
-        <button class="title-section-button" onclick="makeDreamComeTrue()">ENVISION WITH ME</button>
+        <p class="title-section-paragraph">Creating A Future with Web Development</p>
+        <button class="title-section-button" onclick="makeDreamComeTrue()">Let's Build Together</button>
     </div>
     <div class="misc-section" id="aboutme">
         <div class="text-block-container">
-            <h1>About Me</h1>
+            <h2>About Me</h2>
             <p class="aboutme-section-description"> I am a Chemical Engineering graduate turned full-time freelance 
-                software engineer. As a Nigerian, my hope and dreams is to be bigger than everyone thought I'll be,
-                and I am here to help you too. I am a self-taught software engineer with a passion for creating 
-                innovative solutions. </p>
+                software engineer. Through self-teaching and countless hours of dedication, I've transformed my 
+                passion for problem-solving into creating digital solutions that make a difference. 
+                I'm not just building software; I'm crafting experiences 
+                that bring ideas to life, and I'd love to do the same for you. </p>
+            <div class="aboutmeicons">
+                <a href="" target="_blank">
+                    <i class="aboutmeicon fa-brands fa-square-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/lola_softgal/" target="_blank">
+                    <i class="aboutmeicon fa-brands fa-instagram"></i>
+                </a>
+                <a href="mailto:pipelolailesanmi@gmail.com" target="_blank">
+                    <i class="aboutmeicon fa-regular fa-envelope"></i>
+                </a>
+                <a href="" target="_blank"><i class="aboutmeicon fa-brands fa-square-x-twitter"></i></a>
+            </div>
+            <div class="aboutme-download-link">
+                <a href="./aboutmesection/ILESANMI OLUWATIMILEHIN CV.docx" download target="_blank">Download My CV</a>
+            </div>
         </div>
+           
     </div>
  </body>
 </html>
@@ -40,12 +58,12 @@
 
     .misc-section{
         width: 100vw;
-        padding: 100px 25px;
+        padding: 90px 25px;
+        background-color: var(--titleSectionSecondaryColor);
     }
 
     .text-block-container{
         width: 65%;
-        border: solid black 1px;
         margin: 0 auto;
     }
 

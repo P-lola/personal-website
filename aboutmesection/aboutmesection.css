@@ -1,7 +1,42 @@
 #aboutme {
     text-align: center;
+    color: var(--titleSectionPrimaryColor);
 }
 
 .aboutme-section-description {
     text-align: justify;
 }
+
+.aboutmeicons {
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.aboutmeicons > a {
+    text-decoration: none;
+}
+
+.aboutmeicon {
+    margin: 15px;
+    color: var(--titleSectionPrimaryColor);
+}
+
+.aboutmeicon:hover {
+    cursor: pointer;
+    color: var(--titleSectionColor2);
+    transform: scale(1.5);
+}
+
+.aboutme-download-link > a {
+    color: var(--titleSectionPrimaryColor);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.aboutme-download-link > a:hover {
+    color: var(--titleSectionColor2);
+    font-weight: bold;
+    font-size: 25px;
+}
+
