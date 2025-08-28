@@ -11,10 +11,39 @@
 }
 
 .craps-game-container{
-    width: min(600px, 40vw);
-    height: min(600px, 40vh);
+    width: min(600px, 50vw);
+    height: min(600px, 50vh);
     border: dashed white 3px;
     margin: 40px auto 0px auto;
     background-image: url(../images/craaps\ casino\ table.png);
     background-size: cover;
+}
+
+.craps-game-regist-pane{
+    text-align: center;
+    margin-top: 25px;
+    color: white;
+}
+
+.craps-register-name-input{
+    border: none;
+    background: none;
+    border-bottom: dashed white 2px;
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+}
+
+.craps-register-name-input:focus {
+    outline-width: 0px;
+}
+
+.craps-registration-continue{
+    margin-top:25px
+}
+
+.craps-registration-continue:hover {
+    cursor: pointer;
+    font-weight: bold;
+    
 }
