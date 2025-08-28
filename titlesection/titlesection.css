@@ -6,12 +6,10 @@
     --titleSectionColor2: #000000;
 }
 
-h1 {
-    text-shadow: 2px 2px 2px var(--titleSectionSecondaryColor);
-}
 
 .title-section-header {
     margin-bottom:-15px;
+    text-shadow: 2px 2px 2px var(--titleSectionSecondaryColor);
 }
 
 .title-section-paragraph{ 
