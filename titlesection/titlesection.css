@@ -1,6 +1,6 @@
 :root {
     --titleSectionPrimaryColor: white;
-    --titleSectionSecondaryColor: #93663F;
+    --titleSectionSecondaryColor: #584120;
     --titleSectionTertiaryColor: #775B43;
     --titleSectionColor1: #BFC9C8;
     --titleSectionColor2: #000000;
@@ -24,12 +24,12 @@
     background-color: transparent;
 }
 
-    #title {
-        color: var(--titleSectionPrimaryColor);
-        text-align: center;
-        padding-top: 200px;
-        background-image: url('../images/keith-hardy-PP8Escz15d8-unsplash.jpg');
-        background-position: center top;
+#title {
+    color: var(--titleSectionPrimaryColor);
+    text-align: center;
+    padding-top: 200px;
+    background-image: url('../images/keith-hardy-PP8Escz15d8-unsplash.jpg');
+    background-position: center top;
     }
 
 .title-section-button:hover {
