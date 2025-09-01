@@ -12,7 +12,7 @@
 
 .craps-game-container{
     width: min(600px, 50vw);
-    height: min(600px, 50vh);
+    height: min(700px, 50vh);
     border: dashed white 3px;
     margin: 40px auto 0px auto;
     background-image: url(../images/craaps\ casino\ table.png);
@@ -51,4 +51,14 @@
 #craps-main-section {
     display: none;
     color: white;
+}
+
+.craps-main-section-stats {
+    text-align: center;
+    margin-top: 100px;
+}
+
+#craps-stats-money-containers {
+    font-size: 20px;
+    margin: 20px 0 10px 0;
 }
