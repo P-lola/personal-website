@@ -1,20 +1,31 @@
+:root {
+    --width-scale: min(600px, 70vw, 70vh);
+    --height-scale: calc(var(--width-scale) * 1);
+    --game-title-size: min(calc(var(--height-scale) * 0.1), 32px);
+    --title-margin-bottom: calc(var(--height-scale) * 0.2);
+}
+
 #craps-game{
     background-image: url(../images/craps\ casino\ dice.jpg);
     background-position: center left;
+    padding: 5px;
 
 }
 
 .craps-game-title{
+    font-size: var(--game-title-size);
+    font-weight: 600;
     text-align: center;
     color: white;
-    margin-top: 100px;
+    margin-bottom: var(--title-margin-bottom); 
+    margin-top: calc(calc(100vh - var(--game-title-size)- var(--title-margin-bottom) - var(--height-scale))/2);
 }
 
 .craps-game-container{
-    width: min(600px, 50vw);
-    height: min(700px, 50vh);
+    width: var(--width-scale);
+    height: var(--height-scale);
     border: dashed white 3px;
-    margin: 40px auto 0px auto;
+    margin: 0px auto;
     background-image: url(../images/craaps\ casino\ table.png);
     background-size: cover;
 }
