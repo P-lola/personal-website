@@ -8,7 +8,7 @@
 #craps-game{
     background-image: url(../images/craps\ casino\ dice.jpg);
     background-position: center left;
-    padding: 5px;
+    padding: 7px;
 
 }
 
@@ -32,7 +32,8 @@
 
 #craps-game-regist-pane{
     text-align: center;
-    margin-top: 25px;
+    margin-top: calc(var(--height-scale)*0.1);
+    font-size: calc(var(--game-title-size)*0.6);
     color: white;
 }
 
@@ -40,7 +41,8 @@
     border: none;
     background: none;
     border-bottom: dashed white 2px;
-    margin-top: 20px;
+    font-size: calc(var(--game-title-size)*0.5);
+    margin: calc(var(--height-scale)*0.07) 0;
     color: white;
     text-align: center;
 }
@@ -49,9 +51,6 @@
     outline-width: 0px;
 }
 
-.craps-registration-continue{
-    margin-top:25px
-}
 
 .craps-registration-continue:hover {
     cursor: pointer;
@@ -66,10 +65,12 @@
 
 .craps-main-section-stats {
     text-align: center;
-    margin-top: 100px;
+    font-size: calc(var(--height-scale) * 0.07);
+    margin-top: calc(var(--height-scale) * 0.2);
 }
 
 #craps-stats-money-containers {
-    font-size: 20px;
-    margin: 20px 0 10px 0;
+    font-size: calc(var(--height-scale) * 0.06);
+    margin-top: calc(var(--height-scale) * 0.05);
+    margin-bottom: calc(var(--height-scale) * 0.04);
 }
