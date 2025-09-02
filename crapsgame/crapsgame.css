@@ -28,6 +28,7 @@
     margin: 0px auto;
     background-image: url(../images/craaps\ casino\ table.png);
     background-size: cover;
+    position: relative;
 }
 
 #craps-game-regist-pane{
@@ -61,16 +62,26 @@
 #craps-main-section {
     display: none;
     color: white;
+    height: 100%;
 }
 
 .craps-main-section-stats {
     text-align: center;
-    font-size: calc(var(--height-scale) * 0.07);
+    font-size: calc(var(--height-scale) * 0.04);
     margin-top: calc(var(--height-scale) * 0.2);
 }
 
 #craps-stats-money-containers {
-    font-size: calc(var(--height-scale) * 0.06);
+    font-size: calc(var(--height-scale) * 0.04);
     margin-top: calc(var(--height-scale) * 0.05);
     margin-bottom: calc(var(--height-scale) * 0.04);
+}
+
+.craps-round-manager {
+    bottom: calc(var(--height-scale) * 0.04);
+    width: 100%;
+    text-align: center;
+    border: solid red 3px;
+    position: absolute;
+    font-size: calc(var(--height-scale) * 0.05);
 }
