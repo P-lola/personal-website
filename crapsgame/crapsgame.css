@@ -2,7 +2,7 @@
     --width-scale: min(600px, 70vw, 70vh);
     --height-scale: calc(var(--width-scale) * 1);
     --game-title-size: min(calc(var(--height-scale) * 0.1), 32px);
-    --title-margin-bottom: calc(var(--height-scale) * 0.2);
+    --title-margin-bottom: calc(var(--height-scale) * 0.15);
 }
 
 #craps-game{
@@ -74,14 +74,66 @@
 #craps-stats-money-containers {
     font-size: calc(var(--height-scale) * 0.04);
     margin-top: calc(var(--height-scale) * 0.05);
-    margin-bottom: calc(var(--height-scale) * 0.04);
+    margin-bottom: calc(var(--height-scale) * 0.05);
+}
+
+.craps-on-table-section {
+    margin-top: calc(var(--height-scale) * 0.06);
+    font-size: calc(var(--height-scale) * 0.04);
+    text-align: center;
+}
+
+.craps-roll-dice-container {
+    border: solid white 2px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.craps-roll-dice-container:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .craps-round-manager {
     bottom: calc(var(--height-scale) * 0.04);
     width: 100%;
     text-align: center;
-    border: solid red 3px;
     position: absolute;
-    font-size: calc(var(--height-scale) * 0.05);
+    font-size: calc(var(--height-scale) * 0.04);
+}
+
+.craps-bet-grid {
+    display: grid;
+    grid-template-columns: 30% auto 30%;
+    width: 70%;
+    margin: 0 auto;
+    border: solid white;
+    border-radius: 5px;
+}
+
+.craps-bet-button {
+    padding: calc(var(--height-scale) * 0.04)
+}
+
+.craps-bet-button:hover {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: calc(var(--height-scale) * 0.045);
+}
+
+.craps-bet-amount-container {
+    padding: calc(var(--height-scale) * 0.03);
+    border-right: solid white 2px;
+    border-left: solid white 2px;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: calc(var(--height-scale) * 0.045);
+}
+
+#craps-user-bet-amount {
+    cursor: text;
+    margin: 0 calc(var(--height-scale) * 0.02)
+}
+
+.craps-user-bet-amount-change:hover {
+    font-weight: bold;
 }

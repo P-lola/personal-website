@@ -3,8 +3,9 @@
         <link rel="stylesheet" href="./titlesection/titlesection.css">
         <link rel="stylesheet" href="./aboutmesection/aboutmesection.css">
         <link rel="stylesheet" href="./crapsgame/crapsgame.css">
+        <link rel="stylesheet" href="./crapsgame/utilities.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     </head>
  <body>
     <div class="main-section" id="title">
@@ -64,17 +65,23 @@
                             Rounds: <span id="craps-stats-rounds"></span>
                         </div>
                     </div>
-                    <div class="craps-round-manager">
-                        <div id="EVEN" onclick="betEven()">
-                            EVEN
-                        </div>
-                        <div id="ODD" onclick="betOdd()">
-                            ODD
-                        </div>
-                        <div>
-                            <span onclick="decreaseBet()">-</span>
-                            <span id="craps-user-bet-amount">$50</span>
-                            <span onclick="increaseBet()">+</span>
+                    <div class="craps-on-table-section">
+                        <div id="craps-roll-dice-button" class="craps-roll-dice-container no-select" onclick="rollDice()" >ROLL DIE <i class="fa-solid fa-dice"></i></div>
+                        <div id="craps-roll-dice-animation-container"></div>
+                    </div>
+                    <div class="craps-round-manager no-select">
+                        <div class="craps-bet-grid">
+                            <div class="craps-bet-button" id="EVEN" onclick="betEven()">
+                                EVEN
+                            </div>
+                            <div class="craps-bet-amount-container">
+                                <span class="craps-user-bet-amount-change" onclick="decreaseBet()">-</span>
+                                <span id="craps-user-bet-amount">$50</span>
+                                <span class="craps-user-bet-amount-change" onclick="increaseBet()">+</span>
+                            </div>
+                            <div class="craps-bet-button" id="ODD" onclick="betOdd()">
+                                ODD
+                            </div>
                         </div>
                     </div>
             </div>
@@ -117,6 +124,7 @@
 </style>
 
 <script src="./crapsgame/crapsgame.js"></script>
+<script type="text/javascript" src="https://unpkg.com/roll-a-die@2.0.1/dist/roll-a-die.js"></script>
 <script>
 
     function makeDreamComeTrue () {
