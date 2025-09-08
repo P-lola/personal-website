@@ -68,7 +68,7 @@
 .craps-main-section-stats {
     text-align: center;
     font-size: calc(var(--height-scale) * 0.04);
-    margin-top: calc(var(--height-scale) * 0.2);
+    margin-top: calc(var(--height-scale) * 0.1);
 }
 
 #craps-stats-money-containers {
@@ -79,12 +79,11 @@
 
 .craps-on-table-section {
     margin-top: calc(var(--height-scale) * 0.06);
-    font-size: calc(var(--height-scale) * 0.04);
+    font-size: calc(var(--height-scale) * 0.06);
     text-align: center;
 }
 
 .craps-roll-dice-container {
-    border: solid white 2px;
     width: fit-content;
     margin: 0 auto;
 }
@@ -92,6 +91,11 @@
 .craps-roll-dice-container:hover {
     cursor: pointer;
     transform: scale(1.1);
+}
+
+#craps-roll-dice-animation-container {
+    margin-top: calc(var(--height-scale) * -0.05);
+    margin-left: calc(var(--height-scale) * -0.06);
 }
 
 .craps-round-manager {
