@@ -95,7 +95,7 @@
 
 #craps-roll-dice-animation-container {
     margin-top: calc(var(--height-scale) * -0.05);
-    margin-left: calc(var(--height-scale) * -0.06);
+    margin-left: calc(var(--height-scale) * -0.14);
 }
 
 .craps-round-manager {

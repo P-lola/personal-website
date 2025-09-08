@@ -103,7 +103,9 @@ function rollDice () {
     rollADie({ element: diceRollElement, numberOfDice: 2, callback: processDiceResult, delay: 10000000 });
 }
 
+window.addEventListener("resize", formatDiceScale);
 function formatDiceScale () {
+    console.log("Resized")
     const vw = window.innerWidth * 0.7
     const vh = window.innerHeight * 0.7
     const widthScale = Math.min(600, vw, vh)
