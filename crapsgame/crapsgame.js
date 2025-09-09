@@ -106,7 +106,7 @@ function rollDice () {
     formatDiceScale()
     document.getElementById(crapsRollDiceButton).style.display = "none"
     const diceRollElement = document.getElementById(crapsRollDoceAnimationContainer)
-    rollADie({ element: diceRollElement, numberOfDice: 2, callback: processDiceResult, delay: 10000000 });
+    rollADie({ element: diceRollElement, numberOfDice: 2, callback: delayedProcessDiceResult, delay: 10000000 });
 }
 
 window.addEventListener("resize", formatDiceScale);
@@ -120,18 +120,22 @@ function formatDiceScale () {
     document.getElementById(crapsRollDoceAnimationContainer).style.transform = "scale(" + scale + ")"
 }
 
+function delayedProcessDiceResult(diceResult) {
+    setTimeout(function() {processDiceResult(diceResult)}, 1000)
+}
+
 function processDiceResult (diceResult) {
-    const sum = diceResult.reduce((partialSum, a) => partialSum + a, 0);
+    const sum = diceResult.reduce((partialSum, a) => partialSum + a, 0)
     let diceSumResult = bets.even
     if (sum % 2 === 1) {
         diceSumResult = bets.odd
     }
     setRounds(currentRounds + 1)
     if (diceSumResult === currentBet) {
-        alert("YOU WINNNNNNN!!!")
+        //alert("YOU WINNNNNNN!!!")
         setMoney(currentMoney + currentBetAmount)
     } else {
-        alert("YOU LOSE ;(")
+        //alert("YOU LOSE ;(")
         setMoney(currentMoney - currentBetAmount)
     }
 }
