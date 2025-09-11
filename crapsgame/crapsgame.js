@@ -20,6 +20,9 @@ const crapsStatsRounds = "craps-stats-rounds"
 const crapsUserBetAmount = "craps-user-bet-amount"
 const crapsRollDiceButton = "craps-roll-dice-button"
 const crapsRollDoceAnimationContainer = "craps-roll-dice-animation-container"
+const crapsBettingGridContainer = "craps-betting-grid-container"
+const crapsRoundFinishGridContainer = "craps-round-finish-grid-container"
+const crapsRoundFinishMessage = "craps-round-finish-message"
 
 //In-game variables
 let currentMoney = startingMoney
@@ -52,6 +55,7 @@ function showMainGamePane() {
 }
 
 function setUpFirstRound() {
+    document.getElementById(crapsRoundFinishGridContainer).style.display = "none"
     document.getElementById(crapsStatsUsername).innerHTML = crapsUsername
     setMoney(startingMoney)
     setRounds(startingRounds)
@@ -131,11 +135,18 @@ function processDiceResult (diceResult) {
         diceSumResult = bets.odd
     }
     setRounds(currentRounds + 1)
+    let roundFinishMessage =  ""
     if (diceSumResult === currentBet) {
-        //alert("YOU WINNNNNNN!!!")
+        roundFinishMessage = "YOU WIN!!!"
         setMoney(currentMoney + currentBetAmount)
     } else {
-        //alert("YOU LOSE ;(")
+        roundFinishMessage = "YOU LOSE ;("
         setMoney(currentMoney - currentBetAmount)
     }
+    if (currentMoney === 0) [
+        roundFinishMessage = "YOU'RE OUTT!!"
+    ]
+    document.getElementById(crapsBettingGridContainer).style.display = "none"
+    document.getElementById(crapsRoundFinishGridContainer).style.display = "block"
+    document.getElementById(crapsRoundFinishMessage).innerHTML = roundFinishMessage
 }

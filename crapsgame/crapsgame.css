@@ -108,36 +108,54 @@
 
 .craps-bet-grid {
     display: grid;
-    grid-template-columns: 30% auto 30%;
-    width: 70%;
+    grid-template-columns: 32% auto 32%;
+    width: 90%;
     margin: 0 auto;
     border: solid white;
     border-radius: 5px;
 }
 
-.craps-bet-button {
+.craps-bet-button, .craps-round-finish-button {
     padding: calc(var(--height-scale) * 0.04)
 }
 
-.craps-bet-button:hover {
+.craps-bet-button:hover, .craps-round-finish-button:hover {
     cursor: pointer;
     font-weight: bold;
     font-size: calc(var(--height-scale) * 0.045);
 }
 
 .craps-bet-amount-container {
-    padding: calc(var(--height-scale) * 0.03);
+    padding: calc(var(--height-scale) * 0.04);
+    border-right: solid white 2px;
+    border-left: solid white 2px;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: calc(var(--height-scale) * 0.04);
+}
+
+#craps-user-bet-amount {
+    cursor: text;
+    margin: 0 calc(var(--height-scale) * 0.02);
+}
+
+.craps-user-bet-amount-change:hover {
+    font-weight: bold;
+}
+
+.craps-round-finish-grid {
+    display: grid;
+    grid-template-columns: 32% auto 32%;
+    width: 90%;
+    margin: 0 auto;
+    border: solid white;
+    border-radius: 5px;
+}
+
+#craps-round-finish-message {
+    padding: calc(var(--height-scale) * 0.045);
     border-right: solid white 2px;
     border-left: solid white 2px;
     background-color: rgba(0, 0, 0, 0.2);
     font-size: calc(var(--height-scale) * 0.045);
 }
-
-#craps-user-bet-amount {
-    cursor: text;
-    margin: 0 calc(var(--height-scale) * 0.02)
-}
-
-.craps-user-bet-amount-change:hover {
-    font-weight: bold;
 }
