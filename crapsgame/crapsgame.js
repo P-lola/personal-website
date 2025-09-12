@@ -19,7 +19,7 @@ const crapsStatsMoney = "craps-stats-money"
 const crapsStatsRounds = "craps-stats-rounds"
 const crapsUserBetAmount = "craps-user-bet-amount"
 const crapsRollDiceButton = "craps-roll-dice-button"
-const crapsRollDoceAnimationContainer = "craps-roll-dice-animation-container"
+const crapsRollDiceAnimationContainer = "craps-roll-dice-animation-container"
 const crapsBettingGridContainer = "craps-betting-grid-container"
 const crapsRoundFinishGridContainer = "craps-round-finish-grid-container"
 const crapsRoundFinishMessage = "craps-round-finish-message"
@@ -32,7 +32,7 @@ let currentBetAmount = minimumBet
 let canChangeBet = true
 
 function registerCrapsPlayer() {
-    crapsUsername = (document.getElementById(crapsUsernameInput).value)
+    crapsUsername = document.getElementById(crapsUsernameInput).value
 
     //Validate Username
     let firstCharIsDigitRegex = /^[0-9]|[^a-zA-Z0-9_]/g
@@ -46,6 +46,11 @@ function registerCrapsPlayer() {
     }
 
 }
+
+function showregisterPane() {
+    document.getElementById(crapsGameRegisterPane).style.display = "block"
+}
+
 function removeregisterPane() {
     document.getElementById(crapsGameRegisterPane).style.display = "none"
 }
@@ -54,9 +59,17 @@ function showMainGamePane() {
     document.getElementById(crapsMainSection).style.display = "block"
 }
 
+function hideMainGamePane() {
+    document.getElementById(crapsMainSection).style.display = "none"
+}
+
 function setUpFirstRound() {
+    document.getElementById(crapsRollDiceAnimationContainer).style.display = "none"
     document.getElementById(crapsRoundFinishGridContainer).style.display = "none"
+    document.getElementById(crapsRollDiceButton).style.display = "block"
+    document.getElementById(crapsBettingGridContainer).style.display = "block"
     document.getElementById(crapsStatsUsername).innerHTML = crapsUsername
+    canChangeBet = true
     setMoney(startingMoney)
     setRounds(startingRounds)
     betEven()
@@ -108,20 +121,20 @@ function setBetAmount(betAmount) {
 function rollDice () {
     canChangeBet = false
     formatDiceScale()
+    document.getElementById(crapsRollDiceAnimationContainer).style.display = "block"
     document.getElementById(crapsRollDiceButton).style.display = "none"
-    const diceRollElement = document.getElementById(crapsRollDoceAnimationContainer)
+    const diceRollElement = document.getElementById(crapsRollDiceAnimationContainer)
     rollADie({ element: diceRollElement, numberOfDice: 2, callback: delayedProcessDiceResult, delay: 10000000 });
 }
 
 window.addEventListener("resize", formatDiceScale);
 function formatDiceScale () {
-    console.log("Resized")
     const vw = window.innerWidth * 0.7
     const vh = window.innerHeight * 0.7
     const widthScale = Math.min(600, vw, vh)
     const heightScale = widthScale * 1
     const scale = heightScale/499.79999999999995
-    document.getElementById(crapsRollDoceAnimationContainer).style.transform = "scale(" + scale + ")"
+    document.getElementById(crapsRollDiceAnimationContainer).style.transform = "scale(" + scale + ")"
 }
 
 function delayedProcessDiceResult(diceResult) {
@@ -149,4 +162,17 @@ function processDiceResult (diceResult) {
     document.getElementById(crapsBettingGridContainer).style.display = "none"
     document.getElementById(crapsRoundFinishGridContainer).style.display = "block"
     document.getElementById(crapsRoundFinishMessage).innerHTML = roundFinishMessage
+}
+
+function exitGame() {
+    let noOfRounds = ""
+    if (currentRounds > 1) {
+        noOfRounds = "rounds"
+    } else {
+        noOfRounds = "round"
+    }
+    alert("After playing " + currentRounds + " " + noOfRounds + " , you leave with " + currentMoney + "$!")
+    hideMainGamePane()
+    showregisterPane()
+    document.getElementById(crapsUsernameInput).value= ""
 }
