@@ -152,10 +152,18 @@
 }
 
 #craps-round-finish-message {
-    padding: calc(var(--height-scale) * 0.045);
+    padding: calc(var(--height-scale) * 0.04);
     border-right: solid white 2px;
     border-left: solid white 2px;
     background-color: rgba(0, 0, 0, 0.2);
     font-size: calc(var(--height-scale) * 0.045);
 }
+
+#craps-next-round-disabled-button{
+    background-color: rgba(0, 0, 0, 0.2);
+    color: grey;
+}
+
+#craps-next-round-disabled-button:hover {
+    cursor: not-allowed;
 }
