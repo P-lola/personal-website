@@ -18,16 +18,18 @@ function getRandomColorCombo() {
 
 async function getNewRandomQuote() {
 
-  const response = await fetch('http://api.quotable.io/quotes/random')
+  const response =await fetch('https://quotesondesign.com/wp-json/custom/v1/random-post?')
+
   if (!response.ok) {
     alert('There was a problem getting a new quote')
   }
   const data = await response.json()
   
-  const quoteText = data[0].content
-  const quoteAuthor = data[0].author
+  const quoteText = data.content
+  const quoteAuthor = data.title
   document.getElementById('random-quote-text').innerHTML = quoteText
-  
+  document.getElementById('random-quote-author').innerHTML = `— ${quoteAuthor}`;
+
   const colorCombo = getRandomColorCombo()
   document.getElementById('random-quote-generator').style.background = 'linear-gradient(45deg, ' + colorCombo[0] + ',' + colorCombo[1]
 }
