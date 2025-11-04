@@ -1,0 +1,169 @@
+:root {
+    --width-scale: min(600px, 70vw, 70vh);
+    --height-scale: calc(var(--width-scale) * 1);
+    --game-title-size: min(calc(var(--height-scale) * 0.1), 32px);
+    --title-margin-bottom: calc(var(--height-scale) * 0.15);
+}
+
+#craps-game{
+    background-image: url(../images/craps\ casino\ dice.jpg);
+    background-position: center left;
+    padding: 7px;
+
+}
+
+.craps-game-title{
+    font-size: var(--game-title-size);
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    margin-bottom: var(--title-margin-bottom); 
+    margin-top: calc(calc(100vh - var(--game-title-size)- var(--title-margin-bottom) - var(--height-scale))/2);
+}
+
+.craps-game-container{
+    width: var(--width-scale);
+    height: var(--height-scale);
+    border: dashed white 3px;
+    margin: 0px auto;
+    background-image: url(../images/craaps\ casino\ table.png);
+    background-size: cover;
+    position: relative;
+}
+
+#craps-game-regist-pane{
+    text-align: center;
+    margin-top: calc(var(--height-scale)*0.1);
+    font-size: calc(var(--game-title-size)*0.6);
+    color: white;
+}
+
+.craps-register-name-input{
+    border: none;
+    background: none;
+    border-bottom: dashed white 2px;
+    font-size: calc(var(--game-title-size)*0.5);
+    margin: calc(var(--height-scale)*0.07) 0;
+    color: white;
+    text-align: center;
+}
+
+.craps-register-name-input:focus {
+    outline-width: 0px;
+}
+
+
+.craps-registration-continue:hover {
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+#craps-main-section {
+    display: none;
+    color: white;
+    height: 100%;
+}
+
+.craps-main-section-stats {
+    text-align: center;
+    font-size: calc(var(--height-scale) * 0.04);
+    margin-top: calc(var(--height-scale) * 0.1);
+}
+
+#craps-stats-money-containers {
+    font-size: calc(var(--height-scale) * 0.04);
+    margin-top: calc(var(--height-scale) * 0.05);
+    margin-bottom: calc(var(--height-scale) * 0.05);
+}
+
+.craps-on-table-section {
+    margin-top: calc(var(--height-scale) * 0.06);
+    font-size: calc(var(--height-scale) * 0.06);
+    text-align: center;
+}
+
+.craps-roll-dice-container {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.craps-roll-dice-container:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#craps-roll-dice-animation-container {
+    margin-top: calc(var(--height-scale) * -0.05);
+    margin-left: calc(var(--height-scale) * -0.14);
+}
+
+.craps-round-manager {
+    bottom: calc(var(--height-scale) * 0.04);
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    font-size: calc(var(--height-scale) * 0.04);
+}
+
+.craps-bet-grid {
+    display: grid;
+    grid-template-columns: 32% auto 32%;
+    width: 90%;
+    margin: 0 auto;
+    border: solid white;
+    border-radius: 5px;
+}
+
+.craps-bet-button, .craps-round-finish-button {
+    padding: calc(var(--height-scale) * 0.04)
+}
+
+.craps-bet-button:hover, .craps-round-finish-button:hover {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: calc(var(--height-scale) * 0.045);
+}
+
+.craps-bet-amount-container {
+    padding: calc(var(--height-scale) * 0.04);
+    border-right: solid white 2px;
+    border-left: solid white 2px;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: calc(var(--height-scale) * 0.04);
+}
+
+#craps-user-bet-amount {
+    cursor: text;
+    margin: 0 calc(var(--height-scale) * 0.02);
+}
+
+.craps-user-bet-amount-change:hover {
+    font-weight: bold;
+}
+
+.craps-round-finish-grid {
+    display: grid;
+    grid-template-columns: 32% auto 32%;
+    width: 90%;
+    margin: 0 auto;
+    border: solid white;
+    border-radius: 5px;
+}
+
+#craps-round-finish-message {
+    padding: calc(var(--height-scale) * 0.04);
+    border-right: solid white 2px;
+    border-left: solid white 2px;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: calc(var(--height-scale) * 0.045);
+}
+
+#craps-next-round-disabled-button{
+    background-color: rgba(0, 0, 0, 0.2);
+    color: grey;
+}
+
+#craps-next-round-disabled-button:hover {
+    cursor: not-allowed;
+}
