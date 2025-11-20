@@ -9,7 +9,6 @@ async function analyzeStock () {
   }
   const url = 'http://127.0.0.1:5000/analyze-stock/' + stockSymbolToAnalyze
 
-  console.log("Running...")
   const response = await fetch(url)
   if (!response.ok) {
     alert('There was a problem getting the analysis for ' + stockSymbolToAnalyze)
