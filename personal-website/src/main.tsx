@@ -5,6 +5,6 @@ import StockAnalysisDashboard from './stockAnalysisDashboard/stockAnalysisDashbo
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <StockAnalysisDashboard />
+    <StockAnalysisDashboard/>
   </StrictMode>,
 )
