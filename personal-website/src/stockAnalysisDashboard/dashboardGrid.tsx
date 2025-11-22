@@ -3,6 +3,7 @@ import 'gridstack/dist/gridstack.min.css';
 import { GridStack } from 'gridstack';
 import { DashboardGridContent } from './stockAnalysisDashboard'
 import NumberStat from './numberStat'
+import LineChartContent from './lineChartContent'
 
 function DashboardGrid({stockData}:{stockData: any}) {
 
@@ -15,7 +16,7 @@ function DashboardGrid({stockData}:{stockData: any}) {
       Dashboard Grid
       <div className="grid-stack">
         {/* First Row */}
-        <div className="grid-stack-item" gs-w="3">
+        <div className="grid-stack-item" gs-w="3" gs-h="1.5">
           <DashboardGridContent className="grid-stack-item-content">
             <NumberStat 
             value={stockData.basicInfo.marketCap}
@@ -24,7 +25,7 @@ function DashboardGrid({stockData}:{stockData: any}) {
             ></NumberStat>
           </DashboardGridContent>
         </div>
-        <div className="grid-stack-item" gs-w="3">
+        <div className="grid-stack-item" gs-w="3" gs-h="1.5">
           <DashboardGridContent className="grid-stack-item-content">
             <NumberStat 
             value={stockData.basicInfo.fullTimeEmployees}
@@ -33,7 +34,7 @@ function DashboardGrid({stockData}:{stockData: any}) {
             ></NumberStat>
             </DashboardGridContent>
         </div>
-        <div className="grid-stack-item" gs-w="3">
+        <div className="grid-stack-item" gs-w="3" gs-h="1.5">
           <DashboardGridContent className="grid-stack-item-content">
             <NumberStat 
             value={stockData.basicInfo.totalRevenue}
@@ -42,7 +43,7 @@ function DashboardGrid({stockData}:{stockData: any}) {
             ></NumberStat>
             </DashboardGridContent>
         </div>
-        <div className="grid-stack-item" gs-w="3">
+        <div className="grid-stack-item" gs-w="3" gs-h="1.5">
           <DashboardGridContent className="grid-stack-item-content">
             <NumberStat 
             value={stockData.basicInfo.trailingEps}
@@ -50,6 +51,14 @@ function DashboardGrid({stockData}:{stockData: any}) {
             center={true}
             ></NumberStat>
             </DashboardGridContent>
+        </div>
+        {/* Second Row */}
+        <div className="grid-stack-item" gs-w="10" gs-h="3">
+          <DashboardGridContent className="grid-stack-item-content">
+            <LineChartContent
+              priceHistory={stockData.priceHistory}>
+            </LineChartContent>
+          </DashboardGridContent>
         </div>
       </div>
     </div>
