@@ -1,5 +1,10 @@
 import { useState } from 'react'
-import { analyzeStock, VerticalAlignContainer, VerticalAlignContent } from "./stockAnalysisDashboard"
+import { 
+  analyzeStock, 
+  VerticalAlignContainer, 
+  VerticalAlignContent,
+  DashboardGriContainer
+ } from "./stockAnalysisDashboard"
 import { MutatingDots } from 'react-loader-spinner'
 import './stockAnalysisDashboard.css'
 import DashboardGrid from './dashboardGrid'
@@ -33,13 +38,15 @@ function StockAnalysisDashboard() {
     return (
       <VerticalAlignContainer>
        <VerticalAlignContent>
-        <div onClick={() => goBack()}>BACK</div>
-        <div>
-          <DashboardGrid
-          stockData={stockData}>
-          </DashboardGrid>
-          {/* {JSON.stringify(stockData)} */}
-        </div>
+        <DashboardGriContainer>
+          <div onClick={() => goBack()}>BACK</div>
+          <div>
+            <DashboardGrid
+            stockData={stockData}>
+            </DashboardGrid>
+            {/* {JSON.stringify(stockData)} */}
+          </div>
+        </DashboardGriContainer>
        </VerticalAlignContent>
       </VerticalAlignContainer>
     )
