@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { analyzeStock, VerticalAlignContainer, VerticalAlignContent } from "./stockAnalysisDashboard"
 import { MutatingDots } from 'react-loader-spinner'
 import './stockAnalysisDashboard.css'
+import DashboardGrid from './dashboardGrid'
 
 function StockAnalysisDashboard() {
   
@@ -20,9 +21,9 @@ function StockAnalysisDashboard() {
     setIsLoading(true)
     const gotStockData = await analyzeStock(stockSymbol)
     if (gotStockData) {
-    setStockData(gotStockData)
-    setGotData(true)
-    setIsLoading(false)
+      setStockData(gotStockData)
+      setGotData(true)
+      setIsLoading(false)
     } else {
       goBack()
     }
@@ -34,7 +35,10 @@ function StockAnalysisDashboard() {
        <VerticalAlignContent>
         <div onClick={() => goBack()}>BACK</div>
         <div>
-          {JSON.stringify(stockData)}
+          <DashboardGrid
+          stockData={stockData}>
+          </DashboardGrid>
+          {/* {JSON.stringify(stockData)} */}
         </div>
        </VerticalAlignContent>
       </VerticalAlignContainer>
