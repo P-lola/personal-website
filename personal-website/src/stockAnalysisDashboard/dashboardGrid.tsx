@@ -6,7 +6,7 @@ import NumberStat from './numberStat'
 import LineChartContent from './lineChartContent'
 import NewsLinks from './newsLink'
 import SentimentDoughnut from './newsSentimentAnalysis'
-
+import WordCloud from './wordCloud'
 
 function DashboardGrid({stockData}:{stockData: any}) {
 
@@ -19,7 +19,7 @@ function DashboardGrid({stockData}:{stockData: any}) {
       Dashboard Grid
       <div className="grid-stack">
         {/* First Row */}
-        <div className="grid-stack-item" gs-w="3" gs-h="1.3">
+        <div className="grid-stack-item" gs-w="3" gs-h="1.1">
           <DashboardGridContent className="grid-stack-item-content">
             <NumberStat 
             value={stockData.basicInfo.marketCap}
@@ -28,7 +28,7 @@ function DashboardGrid({stockData}:{stockData: any}) {
             ></NumberStat>
           </DashboardGridContent>
         </div>
-        <div className="grid-stack-item" gs-w="3" gs-h="1.3">
+        <div className="grid-stack-item" gs-w="3" gs-h="1.1">
           <DashboardGridContent className="grid-stack-item-content">
             <NumberStat 
             value={stockData.basicInfo.fullTimeEmployees}
@@ -37,7 +37,7 @@ function DashboardGrid({stockData}:{stockData: any}) {
             ></NumberStat>
             </DashboardGridContent>
         </div>
-        <div className="grid-stack-item" gs-w="3" gs-h="1.3">
+        <div className="grid-stack-item" gs-w="3" gs-h="1.1">
           <DashboardGridContent className="grid-stack-item-content">
             <NumberStat 
             value={stockData.basicInfo.totalRevenue}
@@ -46,7 +46,7 @@ function DashboardGrid({stockData}:{stockData: any}) {
             ></NumberStat>
             </DashboardGridContent>
         </div>
-        <div className="grid-stack-item" gs-w="3" gs-h="1.3">
+        <div className="grid-stack-item" gs-w="3" gs-h="1.1">
           <DashboardGridContent className="grid-stack-item-content">
             <NumberStat 
             value={stockData.basicInfo.trailingEps}
@@ -72,19 +72,26 @@ function DashboardGrid({stockData}:{stockData: any}) {
           </DashboardGridContent>
         </div>
         {/* Third Row */}
-        <div className="grid-stack-item" gs-w="6" gs-h="2">
+        <div className="grid-stack-item" gs-w="5" gs-h="2">
           <DashboardGridContent className="grid-stack-item-content">
             <NewsLinks
               newsLinks={stockData.newsArticles}>
             </NewsLinks>
           </DashboardGridContent>
         </div>
-        <div className="grid-stack-item" gs-w="4" gs-h="2">
+        <div className="grid-stack-item" gs-w="3.5" gs-h="2">
           <DashboardGridContent className="grid-stack-item-content">
             <SentimentDoughnut
               sentimentData={stockData.newsTextAnalysis}>
             </SentimentDoughnut>
           </DashboardGridContent>
+        </div>
+        <div className="grid-stack-item" gs-w="3" gs-h="2">
+          <div className="grid-stack-item-content">
+            <WordCloud
+              wordCloudImage={stockData.newsTextAnalysis.data.wordCloudImage}>
+            </WordCloud>
+          </div>
         </div>
       </div>
     </div>

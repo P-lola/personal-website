@@ -30,13 +30,13 @@ export const VerticalAlignContent = styled.div`
   padding: 2px 0;
 `
 export const DashboardGriContainer = styled.div`
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
   border: solid black 1px;
 `
 export const DashboardGridContent = styled.div`
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
-  padding: 5px;
+  padding: px;
 `
 
