@@ -5,6 +5,8 @@ import { DashboardGridContent } from './stockAnalysisDashboard'
 import NumberStat from './numberStat'
 import LineChartContent from './lineChartContent'
 import NewsLinks from './newsLink'
+import SentimentDoughnut from './newsSentimentAnalysis'
+
 
 function DashboardGrid({stockData}:{stockData: any}) {
 
@@ -70,11 +72,18 @@ function DashboardGrid({stockData}:{stockData: any}) {
           </DashboardGridContent>
         </div>
         {/* Third Row */}
-        <div className="grid-stack-item" gs-w="6" gs-h="3">
+        <div className="grid-stack-item" gs-w="6" gs-h="2">
           <DashboardGridContent className="grid-stack-item-content">
             <NewsLinks
               newsLinks={stockData.newsArticles}>
             </NewsLinks>
+          </DashboardGridContent>
+        </div>
+        <div className="grid-stack-item" gs-w="4" gs-h="2">
+          <DashboardGridContent className="grid-stack-item-content">
+            <SentimentDoughnut
+              sentimentData={stockData.newsTextAnalysis}>
+            </SentimentDoughnut>
           </DashboardGridContent>
         </div>
       </div>
