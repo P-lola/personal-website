@@ -26,10 +26,23 @@ function LineChartContent({priceHistory}:{priceHistory: any}) {
         plugins: {
           title: {
             display: true,
-            text: 'Historical Stock Price'
+            text: 'Historical Stock Price',
+            color: 'white'
           },
           legend: {
             display: false
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: 'white'
+            }
+          },
+          y: {
+            ticks: {
+              color: 'white'
+            }
           }
         }
       }}
