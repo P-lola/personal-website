@@ -22,6 +22,8 @@ export const VerticalAlignContainer = styled.div`
   display: table;
 `
 
+export const PrimaryColor = '#90b6fa'
+
 export const VerticalAlignContent = styled.div`
   display: table-cell;
   vertical-align:middle;
@@ -36,3 +38,4 @@ export const DashboardGridContent = styled.div`
   border-radius: 5px;
   padding: 15px;
 `
+
