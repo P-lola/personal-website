@@ -3,7 +3,17 @@ import {
   analyzeStock, 
   VerticalAlignContainer, 
   VerticalAlignContent,
-  DashboardGriContainer
+  DashboardGriContainer,
+  MarginSpace,
+  DashboardTitle,
+  DashboardSubTitle,
+  LoadingMutatingContainer,
+  BackButton,
+  InputContainer,
+  AnalyzeInput,
+  AnalyzeButton,
+  DashboardLink,
+  PrimaryColor
  } from "./stockAnalysisDashboard"
 import { MutatingDots } from 'react-loader-spinner'
 import './stockAnalysisDashboard.css'
@@ -39,12 +49,20 @@ function StockAnalysisDashboard() {
       <VerticalAlignContainer>
        <VerticalAlignContent>
         <DashboardGriContainer>
-          <div onClick={() => goBack()}>BACK</div>
+          <DashboardTitle><DashboardLink href={stockData.basicInfo.website} target="_blank" rel="noopener noreferrer">
+            {stockData.basicInfo.longName}
+          </DashboardLink></DashboardTitle>
+        </DashboardGriContainer>
+        <DashboardGriContainer>
+          <DashboardSubTitle>
+            {stockData.basicInfo.sector}
+          </DashboardSubTitle>
+          <MarginSpace></MarginSpace>
+          <BackButton onClick={() => goBack()}>BACK</BackButton>
           <div>
             <DashboardGrid
             stockData={stockData}>
             </DashboardGrid>
-            {/* {JSON.stringify(stockData)} */}
           </div>
         </DashboardGriContainer>
        </VerticalAlignContent>
@@ -57,31 +75,35 @@ function StockAnalysisDashboard() {
     <VerticalAlignContainer>
       <VerticalAlignContent>
         <div>
-          <div id="stock-analysis-dashboard-title">STOCK ANALYSIS DASHBOARD</div>
+          <DashboardTitle id="stock-analysis-dashboard-title">STOCK ANALYSIS DASHBOARD</DashboardTitle>
           {isLoading ? (
-          <div>
-            <MutatingDots
-              visible={true}
-              height="100"
-              width="100"
-              color="#4fa94d"
-              secondaryColor="#4fa94d"
-              radius="12.5"
-              ariaLabel="mutating-dots-loading"
-              wrapperStyle={{}}
-              wrapperClass=""
-            />
-          </div>
+            <LoadingMutatingContainer>
+              <MarginSpace></MarginSpace>
+              <MutatingDots
+                visible={true}
+                height="100"
+                width="100"
+                color={PrimaryColor}
+                secondaryColor="white"
+                radius="12.5"
+                ariaLabel="mutating-dots-loading"
+                wrapperStyle={{}}
+                wrapperClass=""
+              />
+          </LoadingMutatingContainer>
         ) : (
           <div>
-            <div id="stock-analysis-dashboard-subtitle">
+            <DashboardSubTitle id="stock-analysis-dashboard-subtitle">
               Put in a stock symbol you'd like to analyze (e.g. MSFT)
-          </div>
-            <input
-            value={stockSymbol}
-            onChange={e => setStockSymbol(e.target.value)}>
-            </input>
-            <button className="stock-analysis-dashboard-button" onClick={() => runStockAnalysis()}>Analyze</button>
+          </DashboardSubTitle>
+          <MarginSpace></MarginSpace>
+          <InputContainer>
+            <AnalyzeInput
+              value={stockSymbol}
+              onChange={e => setStockSymbol(e.target.value)}>
+            </AnalyzeInput>
+            <AnalyzeButton className="stock-analysis-dashboard-button" onClick={() => runStockAnalysis()}>Analyze</AnalyzeButton>
+          </InputContainer>
           </div>
         )}
         </div>

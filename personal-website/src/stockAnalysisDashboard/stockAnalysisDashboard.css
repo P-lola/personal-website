@@ -3,12 +3,3 @@
   color: white;
 }
 
-.grid-stack {
-  max-width: 100%;
-
-}
-
-.grid-stack-item-content {
-  overflow: auto;
-  margin: 0px;
-}

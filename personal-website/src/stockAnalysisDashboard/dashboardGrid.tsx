@@ -16,7 +16,6 @@ function DashboardGrid({stockData}:{stockData: any}) {
 
   return (
     <div>
-      Dashboard Grid
       <div className="grid-stack">
         {/* First Row */}
         <div className="grid-stack-item" gs-w="3" gs-h="1.1">
