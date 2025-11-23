@@ -53,7 +53,7 @@ export const LoadingMutatingContainer = styled.div`
   width: fit-content;
   margin: 0 auto;
 `
-export const BackButton = styled.div`
+export const BackButton = styled.button`
   margin-left: 10px;
   width: fit-content;
   font-size: 12px;
