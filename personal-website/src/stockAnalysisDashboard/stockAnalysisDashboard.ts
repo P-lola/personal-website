@@ -68,10 +68,18 @@ export const InputContainer = styled.div`
   display: flex;
 `
 export const AnalyzeInput = styled.input`
+  color: white;
   padding: 20px;
   background: none;
   border: none;
   border-bottom: solid white 1px;
+  font-size: 20px;
+  text-align: center;
+   &:focus {
+    outline: none;
+    border-bottom: 2px solid white;
+    font-weight: bold;
+  }
 `
 export const AnalyzeButton = styled.button`
   margin-left: 15px;

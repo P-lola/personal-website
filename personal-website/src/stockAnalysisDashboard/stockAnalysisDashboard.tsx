@@ -21,7 +21,7 @@ import DashboardGrid from './dashboardGrid'
 
 function StockAnalysisDashboard() {
   
-  const [stockData, setStockData] = useState()
+  const [stockData, setStockData] = useState<any>()
   const [stockSymbol, setStockSymbol] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [gotData, setGotData] = useState(false)
