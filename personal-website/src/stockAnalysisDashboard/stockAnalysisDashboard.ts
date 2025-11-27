@@ -5,8 +5,10 @@ export async function analyzeStock (stockSymbolToAnalyze: string) {
     alert('You must put in a ticker symbol before running')
     return
   }
-  const url = 'http://127.0.0.1:5000/analyze-stock/' + stockSymbolToAnalyze
-
+  // const url = 'http://127.0.0.1:5000/analyze-stock/' + stockSymbolToAnalyze
+  // const url = 'http://172.20.6.230:5000/analyze-stock/' + stockSymbolToAnalyze
+  const url = 'https://text-analysis-tool.onrender.com/analyze-stock/' + stockSymbolToAnalyze
+  
   const response = await fetch(url)
   if (!response.ok) {
     alert('There was a problem getting the analysis for ' + stockSymbolToAnalyze)
