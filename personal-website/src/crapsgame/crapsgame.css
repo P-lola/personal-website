@@ -18,7 +18,7 @@
     text-align: center;
     color: white;
     margin-bottom: var(--title-margin-bottom); 
-    margin-top: calc(calc(100vh - var(--game-title-size)- var(--title-margin-bottom) - var(--height-scale))/2);
+    margin-top: calc(calc(100vh - var(--game-title-size) - var(--title-margin-bottom) - var(--height-scale))/2);
 }
 
 .craps-game-container{
