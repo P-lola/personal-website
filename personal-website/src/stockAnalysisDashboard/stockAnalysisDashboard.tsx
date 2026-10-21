@@ -90,6 +90,10 @@ function StockAnalysisDashboard() {
                 wrapperStyle={{}}
                 wrapperClass=""
               />
+              <DashboardSubTitle style={{ fontSize: '13px', marginTop: '10px', opacity: 0.85 }}>
+                Analyzing stock & running text mining...<br/>
+                (If the server is waking up from sleep, this may take up to 60 seconds)
+              </DashboardSubTitle>
           </LoadingMutatingContainer>
         ) : (
           <div>

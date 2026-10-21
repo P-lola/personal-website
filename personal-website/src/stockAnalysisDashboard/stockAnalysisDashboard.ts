@@ -7,15 +7,20 @@ export async function analyzeStock (stockSymbolToAnalyze: string) {
   }
   // const url = 'http://127.0.0.1:5000/analyze-stock/' + stockSymbolToAnalyze
   // const url = 'http://172.20.6.230:5000/analyze-stock/' + stockSymbolToAnalyze
-  const url = 'https://text-analysis-tool.onrender.com/analyze-stock/' + stockSymbolToAnalyze
+  const url = 'https://text-analysis-tool-5v93.onrender.com/analyze-stock/' + stockSymbolToAnalyze
   
-  const response = await fetch(url)
-  if (!response.ok) {
-    alert('There was a problem getting the analysis for ' + stockSymbolToAnalyze)
-    return 
+  try {
+    const response = await fetch(url)
+    if (!response.ok) {
+      alert('There was a problem getting the analysis for ' + stockSymbolToAnalyze + ` (Status: ${response.status})`)
+      return 
+    }
+    const data = await response.json()
+    return data
+  } catch (err: any) {
+    alert('Network error connecting to analysis service: ' + (err?.message || err))
+    return
   }
-  const data = await response.json()
-  return data
 }
 
 export const VerticalAlignContainer = styled.div`
